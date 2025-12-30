@@ -32,7 +32,7 @@ const Portfolio = () => {
                     <i className="fab fa-github"></i>
                   </a>
                   <a
-                    href="https://ai-tools-app.netlify.app/"
+                    href="https://karnexai.netlify.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="live-circle"
@@ -81,7 +81,7 @@ const Portfolio = () => {
                 />
                 <div className="custom-overlay-icons">
                   <a
-                    href="https://github.com/karan4065/Online-Bookstore"
+                    href="https://github.com/karan4065/BookNest"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="github-circle"
@@ -89,7 +89,7 @@ const Portfolio = () => {
                     <i className="fab fa-github"></i>
                   </a>
                   <a
-                    href="https://online-bookstore-system.netlify.app/"
+                    href="https://booknesto.netlify.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="live-circle"
