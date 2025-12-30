@@ -1,0 +1,39 @@
+.logo-fixed {
+  position: fixed;
+  top: 10px;
+  left: 60px;
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  z-index: 10000;
+  border-radius: 6px;
+}
+
+.logo-fixed:hover {
+  color: #d1d1d1;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* ---------------- RESPONSIVE FIX ---------------- */
+@media (max-width: 1024px) {
+  .logo-fixed {
+    font-size: 2rem;
+    left: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-fixed {
+    font-size: 1.6rem;
+    top: 10px;
+    left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-fixed {
+    font-size: 1.7rem;
+    top: 40px;
+    left: 10px;
+  }
+}

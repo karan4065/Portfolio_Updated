@@ -1,0 +1,427 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@335&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Code', monospace;  
+  color: white;            
+}
+.cursor {
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.App {
+  position: relative;
+  background: radial-gradient(
+  circle at 100% -20%,
+  #019bd2 0%,
+  #006e92e7 40%,
+  #003f5a 50%,
+  #002b3e 60%,
+  #01203b 70%,
+  #001528 80%,
+  #000204 90%,
+  #000000 100%
+);
+
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.App::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: inherit;
+  filter: brightness(0.4) hue-rotate(0deg);  
+  z-index: -1;
+}
+
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: auto;
+}
+.animation_layer.parallax {
+  pointer-events: none;
+}
+
+ 
+.animation {
+  position: relative;
+  height: 1000px; 
+  overflow-x: hidden;
+  z-index: 1;
+}
+
+
+.animation_layer {
+  position: absolute;
+  width: 100%;
+  height: 1000px;
+  background-position: bottom center;
+  background-size: auto 1038px;
+  background-repeat: repeat-x;
+}
+
+/* Parallax effect applied to each layer */
+.parallax {
+  position: fixed;
+}
+
+.name-overlay {
+  position: absolute;
+  top: 36%;
+  left: 4%;
+  z-index: 1000;
+  color: white;
+}
+.name-logo {
+  position: fixed;     
+  top: 5%;
+  left: 4%;
+  z-index: 1000;
+  color: rgb(255, 255, 255);
+}
+
+.name-lo {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: 600;
+  
+}
+.name-main {
+  font-size: 9rem;
+  margin: 0;
+  font-family: 'Oswald';
+  font-weight: 400;
+  font-style: normal;
+  line-height: 0.7;
+  letter-spacing: 0.05em;
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+.name-sub {
+  font-size: 2rem;
+  margin-top: 2rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  font-style: normal;
+  color: #908f8f;
+  margin-left: 10px;
+}
+
+.parallax-wrapper {
+  height: 100vh; 
+  position: relative;
+  overflow: hidden;
+ 
+}
+
+.portfolio-wrapper {
+  margin-top: 0;
+  padding-top: 0;
+  z-index: 1;
+  position: relative;
+}
+
+ 
+ 
+#star {
+ width: 100%; /* 5 stars × 50px + spacing */
+  height: 300px;
+  background-image: url('./images/star.png');
+  background-size: 700px; 
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+
+#moon {
+ background-image: url('./images/moon1.png');
+  background-size: 200px; 
+  background-repeat: no-repeat;            
+  background-position: top right; 
+  margin-left: -200px;
+  margin-top: 40px; 
+ }
+
+#mount1 {
+  width: 100%;
+  background-image: url('./images/mount4.png');
+  background-repeat: no-repeat; 
+  background-size: 500px;               
+  background-position:bottom right; 
+  margin-top: 6rem;
+  margin-left: 10rem;                
+ }
+
+#mount2 {
+  width: 100%;
+  background-image: url('./images/mount4.png');
+  background-repeat: no-repeat; 
+  background-size: 400px;               
+  background-position:bottom left; 
+  margin-top: 6rem;
+  margin-left: -15rem;
+ }
+ #mount2::after{
+   content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  filter: brightness(0.9) contrast(1.04) hue-rotate(360deg);
+  z-index: 1;
+  pointer-events: none;
+ }
+  #mount1::after{
+   content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  filter: brightness(0.9) contrast(1.04) hue-rotate(360deg);
+  z-index: 1;
+  pointer-events: none;
+ }
+ 
+
+#pahad {
+background-image: url('./images/final7.png');
+background-repeat: no-repeat;
+background-size: 1700px 900px;                
+background-position: bottom center;
+width: 100%;       
+margin-top: 25rem;  
+ }
+#pahad::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  filter: brightness(0.5) contrast(1.6) hue-rotate(340deg);
+  z-index: 1;
+  pointer-events: none;
+}
+
+#astro {
+  background-image: url('./images/astro2.png');
+  background-size: 420px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  margin-left: 60px;
+  margin-top: -40px;
+
+  animation: astroDrift 14s cubic-bezier(0.5, 0.05, 0.55, 0.95) infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+@keyframes astroDrift {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+
+  20% {
+    transform: translate(18px, -28px) rotate(4deg);
+  }
+
+  40% {
+    transform: translate(-22px, -48px) rotate(-6deg);
+  }
+
+  60% {
+    transform: translate(30px, -20px) rotate(7deg);
+  }
+
+  80% {
+    transform: translate(-18px, -10px) rotate(-4deg);
+  }
+
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+
+/* #astro {
+  background-image: url('./images/astro2.png');
+  background-size: 500px; 
+  background-repeat: no-repeat;            
+  background-position: center; 
+  margin-left: 60px;
+  margin-top: -40px; 
+
+  animation: floatAstro 3s ease infinite;
+  animation: floatAstro2 5s ease-in-out infinite;
+   animation: floatAstro3 6s ease-in-out infinite;
+}
+ 
+@keyframes floatAstro {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(5px, -50px); }
+  50%  { transform: translate(-5px, -5px); }
+  75%  { transform: translate(-10px, 5px); }
+  100% { transform: translate(0, 0); }
+}
+@keyframes floatAstro2 {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(-8px, 6px); }
+  50%  { transform: translate(6px, 10px); }
+  75%  { transform: translate(10px, -6px); }
+  100% { transform: translate(0, 0); }
+}
+@keyframes floatAstro3 {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(7px, -4px); }
+  50%  { transform: translate(-6px, -10px); }
+  75%  { transform: translate(3px, 8px); }
+  100% { transform: translate(0, 0); }
+} */
+
+#treegroup{
+  background-image: url('./images/treegroup.png');
+  background-size: 1700px 460px; 
+  background-repeat: no-repeat;            
+  background-position:bottom center; 
+  margin-top: 18rem; 
+}
+
+#treegroup::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .name-main {
+    font-size: 5rem;
+ 
+  }
+  .name-sub {
+    font-size: 2rem;
+     
+  }
+}
+@media (max-width: 880px) {
+  .name-main {
+    font-size: 6rem;
+    text-align: left;
+  }
+  .name-sub {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+  .name-overlay {
+    top: 50%;
+    left: 4%;
+  }
+
+  .fixed-navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+    padding-left: 1rem;
+  }
+
+  .animation_layer {
+    background-size: contain;
+    background-position: bottom center;
+  }
+
+  #astro {
+    background-size: 400px;
+    margin-left: 130px;
+     margin-top: 80px;
+  }
+
+  #moon {
+    background-size: 200px;
+    margin-left: -50px;
+    margin-top: 20px;
+  }
+
+  #mount1, #mount2 {
+    background-size: 300px;
+    margin-left: 0;
+      background: none;
+  }
+
+  #pahad {
+    background-size: 1700px 950px;
+    margin-top: 56rem;
+   
+  }
+
+  #treegroup {
+    background-size: 1600px 600px;
+    margin-top: 55rem;
+  }
+}
+
+@media (max-width: 480px) {
+   
+  .name-main {
+    font-size: 5rem;
+    margin-bottom: -5px;
+    
+  }
+
+  .name-sub {
+    font-size: 1.2rem;
+  }
+
+  .name-overlay {
+    top: 17%;
+    left: 10%;
+  }
+
+  #astro {
+    background-size: 300px;
+    margin-left: 5px;
+  }
+
+  #moon {
+    background-size: 120px;
+    margin-left: -20px;
+  }
+
+  #pahad {
+    background-size: 1200px 500px;
+    margin-top: 9rem;
+  }
+
+  #treegroup {
+    background-size: 1200px 380px;
+    margin-top: 8rem;
+  }
+
+  #mount1, #mount2 {
+    background: transparent;
+  }
+}
